@@ -1,11 +1,19 @@
 import 'package:flutter/material.dart';
-import 'widgets/empty_state.dart';
+import 'pages/login_page.dart';
+import 'services/app.storage.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Appstorage().ensureDefaulUser();
+
   runApp(
-    const MaterialApp(
+    MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(body: Center(child: EmptyState())),
+      home: LoginPage(
+        onLogin: (){
+          
+        },
+      ),
     ),
   );
 }

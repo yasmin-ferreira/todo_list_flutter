@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 
-class EmptyState extends StatelessWidget {
+import 'package:flutter/material.dart';
+
+class EmptyState extends StatelessWidget{
   final String message;
 
   const EmptyState({
     super.key,
-    this.message =
-        'Você não possui tarefas.\nAdicione uma tarefa para começar.',
+    this.message = 'você não possui tarefas. \nAdicione uma tarefa para começar.',
   });
 
-  @override
-  Widget build(BuildContext context) {
+@override
+  Widget build(BuildContext context){
     final colorScheme = Theme.of(context).colorScheme;
     final textTheme = Theme.of(context).textTheme;
 
@@ -27,7 +28,8 @@ class EmptyState extends StatelessWidget {
           const SizedBox(height: 16),
           Text(
             'Tudo organizado!',
-            style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
+            style: textTheme.titleLarge?.copyWith(
+            ),
           ),
           const SizedBox(height: 8),
           Text(
@@ -35,8 +37,8 @@ class EmptyState extends StatelessWidget {
             textAlign: TextAlign.center,
             style: textTheme.bodyMedium?.copyWith(
               color: colorScheme.onSurfaceVariant,
-            ),
-          ),
+            )
+          )
         ],
       ),
     );
